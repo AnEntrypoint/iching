@@ -34,7 +34,10 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!axios|axios-mock-adapter)/"
+    ]
   },
   "browserslist": {
     "production": [
@@ -49,6 +52,8 @@
     ]
   },
   "devDependencies": {
+    "axios": "^1.11.0",
+    "axios-mock-adapter": "^2.1.0",
     "gh-pages": "^6.3.0"
   }
 }
