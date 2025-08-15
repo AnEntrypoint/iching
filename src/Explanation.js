@@ -353,7 +353,7 @@ function Explanation({ explanation }) {
                                     }
                                 </h4>
                                 <p style={{ fontSize: '1.05rem', marginBottom: '16px' }}>
-                                    {line.meaning}
+                                    {line.meaning.meaning}
                                 </p>
                                 {line.guidance && (
                                     <p style={{ fontSize: '0.95rem', opacity: 0.9, fontStyle: 'italic' }}>
@@ -667,7 +667,7 @@ function Explanation({ explanation }) {
                                         Line Meaning
                                     </h5>
                                     <p style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-                                        {line.meaning}
+                                        {line.meaning.meaning}
                                     </p>
                                 </div>
                                 

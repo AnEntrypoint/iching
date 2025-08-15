@@ -1,5 +1,4 @@
-
-const { generateTrigram } = require('../src/trigram/trigramGenerator');
+import { generateTrigram } from '../trigram/trigramGenerator.js';
 
 test('generateTrigram should return a valid trigram', () => {
     const trigram = generateTrigram();
