@@ -152,25 +152,25 @@ function Explanation({ explanation }) {
                                 <h4 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '12px', fontWeight: '500' }}>
                                     Current Situation
                                 </h4>
-                                <p>{interpretation.situation}</p>
+                                <blockquote style={{margin: 0}}><p>{interpretation.situation}</p></blockquote>
                             </div>
                             <div>
                                 <h4 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '12px', fontWeight: '500' }}>
                                     Recommended Action
                                 </h4>
-                                <p>{interpretation.action}</p>
+                                <blockquote style={{margin: 0}}><p>{interpretation.action}</p></blockquote>
                             </div>
                             <div>
                                 <h4 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '12px', fontWeight: '500' }}>
                                     Expected Outcome
                                 </h4>
-                                <p>{interpretation.outcome}</p>
+                                <blockquote style={{margin: 0}}><p>{interpretation.outcome}</p></blockquote>
                             </div>
                             <div>
                                 <h4 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '12px', fontWeight: '500' }}>
                                     Personal Pattern
                                 </h4>
-                                <p>{interpretation.personality}</p>
+                                <blockquote style={{margin: 0}}><p>{interpretation.personality}</p></blockquote>
                             </div>
                         </div>
                     </div>
@@ -199,9 +199,9 @@ function Explanation({ explanation }) {
                         <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '16px', fontWeight: '500' }}>
                             Structural Composition
                         </h3>
-                        <p style={{ fontSize: '1.05rem', marginBottom: '16px' }}>
-                            {hexagram.structure}
-                        </p>
+                        <blockquote style={{ fontSize: '1.05rem', marginBottom: '16px', margin: 0 }}>
+                            <p>{hexagram.structure}</p>
+                        </blockquote>
                         <div style={{ 
                             display: 'grid', 
                             gridTemplateColumns: '1fr 1fr', 
@@ -229,9 +229,9 @@ function Explanation({ explanation }) {
                     <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '24px', fontWeight: '500' }}>
                         Overall Guidance
                     </h3>
-                    <p style={{ fontSize: '1.1rem', marginBottom: '24px', lineHeight: '1.9' }}>
-                        {guidance.overall}
-                    </p>
+                    <blockquote style={{ fontSize: '1.1rem', marginBottom: '24px', lineHeight: '1.9', margin: 0 }}>
+                        <p>{guidance.overall}</p>
+                    </blockquote>
                 </div>
 
                 <div style={gridStyle}>
@@ -239,11 +239,11 @@ function Explanation({ explanation }) {
                         <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                             Relationships & Human Connections
                         </h4>
-                        <p style={{ marginBottom: '16px' }}>{guidance.relationships}</p>
+                        <blockquote style={{ marginBottom: '16px', margin: 0 }}><p>{guidance.relationships}</p></blockquote>
                         {guidance.social && (
-                            <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                                <strong>Social Context:</strong> {guidance.social}
-                            </p>
+                            <blockquote style={{ fontSize: '0.95rem', opacity: 0.9, margin: 0 }}>
+                                <p><strong>Social Context:</strong> {guidance.social}</p>
+                            </blockquote>
                         )}
                     </div>
                     
@@ -251,11 +251,11 @@ function Explanation({ explanation }) {
                         <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                             Career & Worldly Affairs
                         </h4>
-                        <p style={{ marginBottom: '16px' }}>{guidance.career}</p>
+                        <blockquote style={{ marginBottom: '16px', margin: 0 }}><p>{guidance.career}</p></blockquote>
                         {guidance.business && (
-                            <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                                <strong>Business Strategy:</strong> {guidance.business}
-                            </p>
+                            <blockquote style={{ fontSize: '0.95rem', opacity: 0.9, margin: 0 }}>
+                                <p><strong>Business Strategy:</strong> {guidance.business}</p>
+                            </blockquote>
                         )}
                     </div>
                     
@@ -263,11 +263,11 @@ function Explanation({ explanation }) {
                         <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                             Health & Personal Cultivation
                         </h4>
-                        <p style={{ marginBottom: '16px' }}>{guidance.health}</p>
+                        <blockquote style={{ marginBottom: '16px', margin: 0 }}><p>{guidance.health}</p></blockquote>
                         {guidance.wellbeing && (
-                            <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                                <strong>Cultivation Practice:</strong> {guidance.wellbeing}
-                            </p>
+                            <blockquote style={{ fontSize: '0.95rem', opacity: 0.9, margin: 0 }}>
+                                <p><strong>Cultivation Practice:</strong> {guidance.wellbeing}</p>
+                            </blockquote>
                         )}
                     </div>
                     
@@ -276,7 +276,7 @@ function Explanation({ explanation }) {
                             <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                                 Spiritual Development
                             </h4>
-                            <p>{guidance.spiritual}</p>
+                            <blockquote style={{margin: 0}}><p>{guidance.spiritual}</p></blockquote>
                         </div>
                     )}
                 </div>
@@ -286,11 +286,11 @@ function Explanation({ explanation }) {
                         <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                             Timing & Cycles
                         </h4>
-                        <p style={{ marginBottom: '16px' }}>{guidance.timing}</p>
+                        <blockquote style={{ marginBottom: '16px', margin: 0 }}><p>{guidance.timing}</p></blockquote>
                         {guidance.seasonal && (
-                            <p style={{ fontSize: '0.95rem', opacity: 0.9 }}>
-                                <strong>Seasonal Wisdom:</strong> {guidance.seasonal}
-                            </p>
+                            <blockquote style={{ fontSize: '0.95rem', opacity: 0.9, margin: 0 }}>
+                                <p><strong>Seasonal Wisdom:</strong> {guidance.seasonal}</p>
+                            </blockquote>
                         )}
                     </div>
                     
@@ -299,7 +299,7 @@ function Explanation({ explanation }) {
                             <h4 style={{ fontSize: '1.1rem', color: '#f59e0b', marginBottom: '16px', fontWeight: '500' }}>
                                 Strategic Analysis
                             </h4>
-                            <p>{guidance.structure}</p>
+                            <blockquote style={{margin: 0}}><p>{guidance.structure}</p></blockquote>
                         </div>
                     )}
                 </div>
@@ -323,11 +323,13 @@ function Explanation({ explanation }) {
                         <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '16px', fontWeight: '500' }}>
                             Understanding Changing Lines
                         </h3>
-                        <p style={{ marginBottom: '24px' }}>
+                        <blockquote style={{ marginBottom: '24px', margin: 0 }}>
+                            <p>
                             The changing lines represent dynamic forces at work in your situation. They indicate where transformation 
                             is occurring and provide specific guidance for navigating these changes. Each line position carries 
                             unique significance in the hexagram's overall message.
-                        </p>
+                            </p>
+                        </blockquote>
                     </div>
 
                     <div style={{ display: 'grid', gap: '24px' }}>
@@ -352,13 +354,13 @@ function Explanation({ explanation }) {
                                         'Sage/Completion'
                                     }
                                 </h4>
-                                <p style={{ fontSize: '1.05rem', marginBottom: '16px' }}>
-                                    {line.meaning.meaning}
-                                </p>
+                                <blockquote style={{ fontSize: '1.05rem', marginBottom: '16px', margin: 0 }}>
+                                    <p>{line.meaning.meaning}</p>
+                                </blockquote>
                                 {line.guidance && (
-                                    <p style={{ fontSize: '0.95rem', opacity: 0.9, fontStyle: 'italic' }}>
-                                        <strong>Specific Guidance:</strong> {line.guidance}
-                                    </p>
+                                    <blockquote style={{ fontSize: '0.95rem', opacity: 0.9, fontStyle: 'italic', margin: 0 }}>
+                                        <p><strong>Specific Guidance:</strong> {line.guidance}</p>
+                                    </blockquote>
                                 )}
                             </div>
                         ))}
@@ -374,12 +376,12 @@ function Explanation({ explanation }) {
                     <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '24px', fontWeight: '500' }}>
                         The Eight Trigrams (八卦)
                     </h3>
-                    <p style={{ marginBottom: '24px' }}>
-                        {trigrams.combination}
-                    </p>
-                    <p style={{ marginBottom: '32px' }}>
-                        <strong style={{ color: '#f59e0b' }}>Dynamic Interaction:</strong> {trigrams.relationship}
-                    </p>
+                    <blockquote style={{ marginBottom: '24px', margin: 0 }}>
+                        <p>{trigrams.combination}</p>
+                    </blockquote>
+                    <blockquote style={{ marginBottom: '32px', margin: 0 }}>
+                        <p><strong style={{ color: '#f59e0b' }}>Dynamic Interaction:</strong> {trigrams.relationship}</p>
+                    </blockquote>
                 </div>
 
                 <div style={gridStyle}>
@@ -395,21 +397,21 @@ function Explanation({ explanation }) {
                             <h5 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '12px', fontWeight: '500' }}>
                                 Essential Nature & Meaning
                             </h5>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Fundamental Nature:</strong> {trigrams.upper.nature}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Core Meaning:</strong> {trigrams.upper.meaning}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Attributes:</strong> {trigrams.upper.attribute}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Positive Qualities:</strong> {trigrams.upper.qualities}
-                            </p>
-                            <p style={{ color: '#ef4444' }}>
-                                <strong>Shadow Aspects:</strong> {trigrams.upper.defects}
-                            </p>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Fundamental Nature:</strong> {trigrams.upper.nature}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Core Meaning:</strong> {trigrams.upper.meaning}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Attributes:</strong> {trigrams.upper.attribute}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Positive Qualities:</strong> {trigrams.upper.qualities}</p>
+                            </blockquote>
+                            <blockquote style={{ color: '#ef4444', margin: 0 }}>
+                                <p><strong>Shadow Aspects:</strong> {trigrams.upper.defects}</p>
+                            </blockquote>
                         </div>
 
                         <div style={{ 
@@ -458,21 +460,21 @@ function Explanation({ explanation }) {
                             <h5 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '12px', fontWeight: '500' }}>
                                 Essential Nature & Meaning
                             </h5>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Fundamental Nature:</strong> {trigrams.lower.nature}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Core Meaning:</strong> {trigrams.lower.meaning}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Attributes:</strong> {trigrams.lower.attribute}
-                            </p>
-                            <p style={{ marginBottom: '12px' }}>
-                                <strong>Positive Qualities:</strong> {trigrams.lower.qualities}
-                            </p>
-                            <p style={{ color: '#ef4444' }}>
-                                <strong>Shadow Aspects:</strong> {trigrams.lower.defects}
-                            </p>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Fundamental Nature:</strong> {trigrams.lower.nature}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Core Meaning:</strong> {trigrams.lower.meaning}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Attributes:</strong> {trigrams.lower.attribute}</p>
+                            </blockquote>
+                            <blockquote style={{ marginBottom: '12px', margin: 0 }}>
+                                <p><strong>Positive Qualities:</strong> {trigrams.lower.qualities}</p>
+                            </blockquote>
+                            <blockquote style={{ color: '#ef4444', margin: 0 }}>
+                                <p><strong>Shadow Aspects:</strong> {trigrams.lower.defects}</p>
+                            </blockquote>
                         </div>
 
                         <div style={{ 
@@ -537,7 +539,7 @@ function Explanation({ explanation }) {
                                     <h4 style={{ fontSize: '1rem', color: '#fbbf24', marginBottom: '12px', fontWeight: '500' }}>
                                         Five Elements Wisdom
                                     </h4>
-                                    <p style={{ marginBottom: '16px' }}>{fiveElements.advice}</p>
+                                    <blockquote style={{ marginBottom: '16px', margin: 0 }}><p>{fiveElements.advice}</p></blockquote>
                                     {fiveElements.source && (
                                         <p style={{ fontSize: '0.9rem', opacity: 0.8, fontStyle: 'italic' }}>
                                             Source: {fiveElements.source}
@@ -588,11 +590,13 @@ function Explanation({ explanation }) {
                     <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '24px', fontWeight: '500' }}>
                         The Six Lines - From Earth to Heaven
                     </h3>
-                    <p style={{ marginBottom: '24px' }}>
+                    <blockquote style={{ marginBottom: '24px', margin: 0 }}>
+                        <p>
                         Each line represents a stage of development within the hexagram's situation. Lines are read from bottom 
                         (Line 1 - the beginning) to top (Line 6 - the completion). The position of each line, its yin or yang nature, 
                         and its relationships with other lines all contribute to its meaning.
-                    </p>
+                        </p>
+                    </blockquote>
                     <div style={{ 
                         padding: '16px', 
                         backgroundColor: 'rgba(0,0,0,0.3)', 
@@ -666,9 +670,11 @@ function Explanation({ explanation }) {
                                     <h5 style={{ fontSize: '1rem', color: '#f59e0b', marginBottom: '12px', fontWeight: '500' }}>
                                         Line Meaning
                                     </h5>
-                                    <p style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
+                                    <blockquote style={{ fontSize: '1.05rem', lineHeight: '1.8', margin: 0 }}>
+                                        <p>
                                         {line.meaning.meaning}
-                                    </p>
+                                        </p>
+                                    </blockquote>
                                 </div>
                                 
                                 {line.classical && (
@@ -723,9 +729,11 @@ function Explanation({ explanation }) {
                         <h3 style={{ fontSize: '1.15rem', color: '#f59e0b', marginBottom: '20px', fontWeight: '600' }}>
                             Hidden Teachings
                         </h3>
-                        <p style={{ fontSize: '1.05rem', lineHeight: '1.9' }}>
+                        <blockquote style={{ fontSize: '1.05rem', lineHeight: '1.9', margin: 0 }}>
+                            <p>
                             {guidance.esoteric}
-                        </p>
+                            </p>
+                        </blockquote>
                     </div>
                 )}
 
@@ -734,15 +742,15 @@ function Explanation({ explanation }) {
                         <h3 style={{ fontSize: '1.15rem', color: '#f59e0b', marginBottom: '20px', fontWeight: '600' }}>
                             Nuclear Hexagram
                         </h3>
-                        <p style={{ fontSize: '1.05rem', marginBottom: '16px' }}>
-                            The nuclear hexagram reveals the inner essence hidden within the outer form.
-                        </p>
+                        <blockquote style={{ fontSize: '1.05rem', marginBottom: '16px', margin: 0 }}>
+                            <p>The nuclear hexagram reveals the inner essence hidden within the outer form.</p>
+                        </blockquote>
                         <p>
                             <strong>Nuclear Hexagram:</strong> {hexagram.nuclear.number}. {hexagram.nuclear.name}
                         </p>
-                        <p style={{ fontStyle: 'italic', marginTop: '12px' }}>
-                            {hexagram.nuclear.meaning}
-                        </p>
+                        <blockquote style={{ fontStyle: 'italic', marginTop: '12px', margin: 0 }}>
+                            <p>{hexagram.nuclear.meaning}</p>
+                        </blockquote>
                     </div>
                 )}
 
@@ -754,9 +762,9 @@ function Explanation({ explanation }) {
                         <p>
                             <strong>Mutual Hexagram:</strong> {hexagram.mutual.number}. {hexagram.mutual.name}
                         </p>
-                        <p style={{ fontStyle: 'italic', marginTop: '12px' }}>
-                            This represents the shadow or complementary aspect of your current situation.
-                        </p>
+                        <blockquote style={{ fontStyle: 'italic', marginTop: '12px', margin: 0 }}>
+                            <p>This represents the shadow or complementary aspect of your current situation.</p>
+                        </blockquote>
                     </div>
                 )}
 
@@ -767,14 +775,18 @@ function Explanation({ explanation }) {
                     borderTop: '1px solid #374151',
                     color: '#9ca3af'
                 }}>
-                    <p style={{ fontSize: '1rem', fontStyle: 'italic', marginBottom: '16px' }}>
+                    <blockquote style={{ fontSize: '1rem', fontStyle: 'italic', marginBottom: '16px', margin: 0 }}>
+                        <p>
                         "The I Ching does not offer itself with proofs and results; it does not vaunt itself, 
                         nor is it easy to approach. Like a part of nature, it waits until it is discovered."
-                    </p>
-                    <p style={{ fontSize: '0.875rem', marginBottom: '24px' }}>
+                        </p>
+                    </blockquote>
+                    <blockquote style={{ fontSize: '0.875rem', marginBottom: '24px', margin: 0 }}>
+                        <p>
                         The wisdom of the I Ching is inexhaustible. Each reading offers layers of meaning 
                         that reveal themselves through contemplation and lived experience.
-                    </p>
+                        </p>
+                    </blockquote>
                     
                     <div style={{ 
                         textAlign: 'left',

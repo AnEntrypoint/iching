@@ -320,9 +320,11 @@ function App() {
                             }}>
                                 <span style={{ color: '#f59e0b' }}>📜</span> History
                             </h4>
-                            <p style={{ color: '#d1d5db', fontSize: '0.875rem' }}>
+                            <blockquote style={{ color: '#d1d5db', fontSize: '0.875rem', margin: 0 }}>
+                                <p style={{margin: 0}}>
                                 The I Ching or Yi Jing, also known as the Book of Changes, is an ancient Chinese divination text and the oldest of the Chinese classics dating back over 3,000 years.
-                            </p>
+                                </p>
+                            </blockquote>
                         </div>
                         <div style={{
                             backgroundColor: '#111827',
@@ -340,9 +342,11 @@ function App() {
                             }}>
                                 <span style={{ color: '#f59e0b' }}>☯</span> Philosophy
                             </h4>
-                            <p style={{ color: '#d1d5db', fontSize: '0.875rem' }}>
+                            <blockquote style={{ color: '#d1d5db', fontSize: '0.875rem', margin: 0 }}>
+                                <p style={{margin: 0}}>
                                 The I Ching embodies a model of the universe based on the dynamic balance of opposites (yin and yang), the evolution of events as a process, and acceptance of the inevitability of change.
-                            </p>
+                                </p>
+                            </blockquote>
                         </div>
                         <div style={{
                             backgroundColor: '#111827',
@@ -360,9 +364,11 @@ function App() {
                             }}>
                                 <span style={{ color: '#f59e0b' }}>❓</span> How to Use
                             </h4>
-                            <p style={{ color: '#d1d5db', fontSize: '0.875rem' }}>
+                            <blockquote style={{ color: '#d1d5db', fontSize: '0.875rem', margin: 0 }}>
+                                <p style={{margin: 0}}>
                                 Focus on your question, then cast the hexagram. The resulting pattern provides insight into your situation. Interpret the meaning with an open mind and heart.
-                            </p>
+                                </p>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
