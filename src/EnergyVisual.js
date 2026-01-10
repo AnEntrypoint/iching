@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-/**
  * Dark theme hexagram visualization matching the design guideline
  */
 function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
@@ -8,11 +7,9 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
     const animationRef = useRef(null);
     const [isAnimating] = useState(true);
     
-    // Canvas dimensions
     const CANVAS_WIDTH = 300;
     const CANVAS_HEIGHT = 300;
     
-    // Hexagram layout - matching the guideline
     const LINE_WIDTH = 80;
     const LINE_HEIGHT = 12;
     const LINE_SPACING = 16;
@@ -30,23 +27,19 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
         const ctx = canvas.getContext('2d');
         let animationTime = 0;
         
-        // Animation loop
         const animate = () => {
             if (!isAnimating) return;
             
             animationTime += 0.016;
             
-            // Clear canvas with transparent background
             ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
             
-            // Draw circular background
             ctx.save();
             ctx.fillStyle = '#374151';
             ctx.beginPath();
             ctx.arc(CENTER_X, CENTER_Y, 120, 0, Math.PI * 2);
             ctx.fill();
             
-            // Inner shadow effect
             const gradient = ctx.createRadialGradient(CENTER_X, CENTER_Y, 100, CENTER_X, CENTER_Y, 120);
             gradient.addColorStop(0, 'rgba(17, 24, 39, 0)');
             gradient.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
@@ -56,10 +49,8 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
             ctx.fill();
             ctx.restore();
             
-            // Draw hexagram lines
             drawHexagramLines(ctx, animationTime);
             
-            // Draw hexagram number if available
             const hexagramNumber = getHexagramNumber(lines);
             if (hexagramNumber) {
                 ctx.save();
@@ -88,9 +79,7 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
             
             ctx.save();
             
-            // Set line color and style
             if (isChanging) {
-                // Pulsing effect for changing lines
                 const pulse = Math.sin(time * 2) * 0.3 + 0.7;
                 ctx.strokeStyle = `rgba(245, 158, 11, ${pulse})`;
                 ctx.shadowBlur = 10;
@@ -103,14 +92,11 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
             ctx.lineCap = 'round';
             
             if (isYang) {
-                // Solid line for Yang
                 ctx.beginPath();
                 ctx.moveTo(centerX - LINE_WIDTH/2, y);
                 ctx.lineTo(centerX + LINE_WIDTH/2, y);
                 ctx.stroke();
             } else {
-                // Broken line for Yin
-                // eslint-disable-next-line no-unused-vars
                 const segmentLength = (LINE_WIDTH - YIN_GAP) / 2;
                 
                 ctx.beginPath();
@@ -128,8 +114,6 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
         };
         
         const getHexagramNumber = (lines) => {
-            // Convert lines to hexagram number (simplified)
-            // In real implementation, this would map to actual I Ching hexagram numbers
             let binary = '';
             lines.forEach(line => {
                 binary += line.toString();
