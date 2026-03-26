@@ -14,6 +14,7 @@ function generateTrigram() {
     
     return {
         lines,
+        hexagram: { lines },
         name: getHexagramName(lines),
         symbol: `${upperTrigram}${lowerTrigram}`,
         upperTrigram,
