@@ -2,8 +2,10 @@ import React from 'react';
 import { explanationStyles } from './styles/explanationStyles.js';
 import LinesSection from './components/LinesSection.js';
 
-const Explanation = ({ hexagram }) => {
-    const { 
+const Explanation = ({ explanation }) => {
+    const hexagram = explanation?.hexagram || {};
+    const changingLines = explanation?.changingLines || [];
+    const {
         containerStyle, 
         sectionStyle, 
         subsectionStyle, 
@@ -76,10 +78,10 @@ const Explanation = ({ hexagram }) => {
             </section>
             
             {/* LEVEL 4: CHANGING LINES */}
-            {hexagram.changingLines && hexagram.changingLines.length > 0 && (
+            {changingLines && changingLines.length > 0 && (
                 <section style={sectionStyle}>
                     <h2 style={levelHeaderStyle(4)}>Level 4: Changing Lines</h2>
-                    <LinesSection changingLines={hexagram.changingLines} />
+                    <LinesSection changingLines={changingLines} />
                 </section>
             )}
         </div>
