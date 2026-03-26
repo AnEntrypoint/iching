@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
- * Dark theme hexagram visualization matching the design guideline
+/** Dark theme hexagram visualization matching the design guideline
  */
 function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
     const canvasRef = useRef(null);
