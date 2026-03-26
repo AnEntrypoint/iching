@@ -7,11 +7,10 @@ const Explanation = ({ explanation }) => {
     const changingLines = explanation?.changingLines || [];
     const {
         containerStyle, 
-        sectionStyle, 
-        subsectionStyle, 
+        sectionStyle,
+        subsectionStyle,
         levelHeaderStyle,
-        textStyle,
-        listStyle
+        textStyle
     } = explanationStyles;
 
     return (

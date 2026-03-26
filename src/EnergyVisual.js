@@ -97,8 +97,6 @@ function EnergyVisual({ lines = [], changingLines = [], trigrams = {} }) {
                 ctx.lineTo(centerX + LINE_WIDTH/2, y);
                 ctx.stroke();
             } else {
-                const segmentLength = (LINE_WIDTH - YIN_GAP) / 2;
-                
                 ctx.beginPath();
                 ctx.moveTo(centerX - LINE_WIDTH/2, y);
                 ctx.lineTo(centerX - YIN_GAP/2, y);
