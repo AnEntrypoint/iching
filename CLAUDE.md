@@ -1,1 +1,5 @@
 - Always commit and push after making changes
+- EnergyVisual uses canvas which requires mocking in jsdom tests — mock the component, not HTMLCanvasElement.prototype.getContext
+- provideExplanation is synchronous despite being called inside async initializeReading — loading state is only visible for one render tick
+- getLineMeaning returns {text, classical, source} object, not a plain string
+- generateTrigram returns hexagram: {lines} alongside top-level lines — both exist
