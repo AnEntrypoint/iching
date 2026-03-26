@@ -17,7 +17,7 @@ function MainContent({ state, dynamicStyles, generateReading }) {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                         <div>
                             <EnergyVisual 
-                                lines={state.trigram.trigram.lines} 
+                                lines={state.trigram.lines}
                                 changingLines={state.trigram.explanation.changingLines || []}
                                 trigrams={state.trigram.explanation.trigrams || {}}
                             />
@@ -138,7 +138,6 @@ function MainContent({ state, dynamicStyles, generateReading }) {
                 Cast New Hexagram
             </button>
         </div>
-    );
     );
 }
 
