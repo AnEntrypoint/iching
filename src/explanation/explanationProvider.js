@@ -1,7 +1,7 @@
 // I Ching Explanation Provider
 // Cleaned up version with data extracted to separate files
 
-import { HEXAGRAMS, TRIGRAMS, mutualPairs, trigramMap, meanings, baseAdvice, timing, generatingCycle, overcomingCycle, elementAdvice } from '../data/index.js';
+import { HEXAGRAMS, TRIGRAMS } from '../data/index.js';
 
 function linesToBinary(lines) {
     return lines.map(line => line === 1 ? '1' : '0').join('');
@@ -72,6 +72,7 @@ function getChangingLines(lines) {
         const isChanging = Math.random() < 0.15;
         const correctness = (position % 2 === 1 && line === 1) || (position % 2 === 0 && line === 0);
         
+        const lineMeaning = getLineMeaning(position, line);
         return {
             position,
             name: lineNames[index],
@@ -80,9 +81,9 @@ function getChangingLines(lines) {
             value: line,
             correctness: correctness ? 'correct' : 'incorrect',
             isChanging,
-            meaning: getLineMeaning(position, line),
-            classical: getLineMeaning(position, line).classical || `Classical text for line ${position}: ${line === 1 ? 'Yang' : 'Yin'} line meaning.`,
-            source: getLineMeaning(position, line).source || "Zhou Yi, Line Texts (Yao Ci)",
+            meaning: lineMeaning.text,
+            classical: lineMeaning.classical || `Classical text for line ${position}: ${line === 1 ? 'Yang' : 'Yin'} line meaning.`,
+            source: lineMeaning.source || "Zhou Yi, Line Texts (Yao Ci)",
             relationships: [
                 {
                     type: 'correspondence',
@@ -134,7 +135,13 @@ function getLineMeaning(position, lineType) {
         }
     };
     
-    return meanings[position][lineType === 1 ? 'yang' : 'yin'];
+    const lineData = meanings[position] || meanings[1];
+    const type = lineType === 1 ? 'yang' : 'yin';
+    return {
+        text: lineData[type],
+        classical: lineData.classical,
+        source: lineData.source
+    };
 }
 
 /**

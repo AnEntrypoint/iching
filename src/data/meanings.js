@@ -5,7 +5,7 @@ export const meanings = {
         1: {
             yang: "Beginning with strength and hidden potential. Foundation is solid.",
             yin: "Beginning with receptivity. Time for careful observation.",
-            classical: position === 1 ? "初九：潛龍勿用。(Chu jiu: Qian long wu yong.) 'Hidden dragon. Do not act.'" : "初六：履霜，堅冰至。(Chu liu: Lu shuang, jian bing zhi.) 'When frost is underfoot, solid ice is near.'",
+            classical: "初九：潛龍勿用。(Chu jiu: Qian long wu yong.) 'Hidden dragon. Do not act.' / 初六：履霜，堅冰至。(Chu liu: Lu shuang, jian bing zhi.) 'When frost is underfoot, solid ice is near.'",
             source: "Zhou Yi, Line Texts (Yao Ci)"
         },
         2: {
